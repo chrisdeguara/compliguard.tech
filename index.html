@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CompliGuard - Compliance Reports for Office 365</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://js.stripe.com/v3/"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body class="bg-gray-100 font-sans pt-28">
+    <!-- Header -->
+    <header
+      id="header"
+      class="bg-white shadow-md fixed top-0 left-0 w-full transition-all duration-500 ease-in-out z-50"
+    >
+      <div
+        class="container mx-auto px-4 py-6 flex justify-between items-center"
+      >
+        <h1 class="text-2xl font-bold text-gray-800">CompliGuard</h1>
+        <button
+          id="menu-toggle"
+          class="md:hidden text-gray-600 focus:outline-none"
+        >
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
+        <nav id="nav-menu" class="hidden md:flex space-x-8">
+          <a href="#features" class="text-gray-600 hover:text-gray-800"
+            >Features</a
+          >
+          <a href="#pricing" class="text-gray-600 hover:text-gray-800"
+            >Pricing</a
+          >
+          <a href="#join-us" class="text-gray-600 hover:text-gray-800"
+            >Join Us</a
+          >
+          <a href="#contact" class="text-gray-600 hover:text-gray-800"
+            >Contact</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      class="bg-gradient-to-r from-blue-500 to-purple-600 text-white py-20"
+    >
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-4xl font-bold mb-4">
+          Ensure Compliance in Your Office 365 Environment
+        </h2>
+        <p class="text-xl mb-8">
+          Generate detailed compliance reports, scan Microsoft Teams channels
+          for policy violations, and keep your organization secure.
+        </p>
+        <a
+          href="#pricing"
+          class="btn-hover bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition"
+          role="button"
+          ><i class="fas fa-arrow-right mr-2"></i>Get Started</a
+        >
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-white fade-in">
+      <div class="container mx-auto px-4">
+        <h3 class="text-3xl font-bold text-center mb-12">Key Features</h3>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="feature-card text-center">
+            <div
+              class="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4"
+            >
+              <svg
+                class="w-8 h-8 text-blue-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                ></path>
+              </svg>
+            </div>
+            <h4 class="text-xl font-semibold mb-2">Compliance Reports</h4>
+            <p class="text-gray-600">
+              Automated generation of compliance reports for Office 365,
+              ensuring all data meets regulatory standards.
+            </p>
+          </div>
+          <div class="feature-card text-center">
+            <div
+              class="bg-green-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4"
+            >
+              <svg
+                class="w-8 h-8 text-green-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+                ></path>
+              </svg>
+            </div>
+            <h4 class="text-xl font-semibold mb-2">Teams Channel Scanning</h4>
+            <p class="text-gray-600">
+              Scan Microsoft Teams channels for content that violates company
+              policies, with detailed alerts and reports.
+            </p>
+          </div>
+          <div class="feature-card text-center">
+            <div
+              class="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4"
+            >
+              <svg
+                class="w-8 h-8 text-purple-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+                ></path>
+              </svg>
+            </div>
+            <h4 class="text-xl font-semibold mb-2">Secure & Automated</h4>
+            <p class="text-gray-600">
+              Fully automated processes with enterprise-grade security to
+              protect your sensitive data.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 bg-gray-100 fade-in">
+      <div class="container mx-auto px-4">
+        <h3 class="text-3xl font-bold text-center mb-12">Pricing</h3>
+        <div
+          class="max-w-md mx-auto bg-white rounded-lg shadow-lg overflow-hidden"
+        >
+          <div class="px-6 py-8">
+            <h4 class="text-2xl font-bold text-center mb-4">Pre-Sale Access</h4>
+            <p class="text-center text-gray-600 mb-6">
+              Secure your spot for early access to our compliance tool at a
+              special pre-sale price. Pre-sale buyers also receive free priority
+              support. Once available, access will be via subscription pricing.
+            </p>
+            <div class="text-center mb-6">
+              <span class="text-4xl font-bold">€59</span>
+            </div>
+            <button
+              id="checkout-button"
+              class="btn-hover w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition"
+            >
+              <i class="fas fa-credit-card mr-2"></i>Buy Now
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mailing List Section -->
+    <section id="join-us" class="py-20 bg-gray-100 fade-in">
+      <div class="container mx-auto px-4 text-center">
+        <h3 class="text-3xl font-bold mb-8">Join Us</h3>
+        <p class="text-gray-600 mb-8">
+          Not ready to buy? Join our mailing list for exclusive updates and
+          early access invites.
+        </p>
+        <form
+          id="subscribe-form"
+          action="https://08288ac6.sibforms.com/serve/MUIFACS4unKXZYizE0VD4LoSG6dcjYv03gjvgeDgVfDiwwVDpNgSUyb2sQpdDgZgiDCdqGo6btfhJzgfL461PE9UyJ5AkdR_-EZpERc05oHQdQBubSj4exhLFkfmkqjVEw99FDW-ZyfQXkwUv33St1Y0cdLWesRE9shcx7JNBfB3N0tlIzLXYgY7rzIniEosakaA7p9SxQNvLZg5GA=="
+          method="post"
+          class="max-w-md mx-auto"
+          target="hidden-iframe"
+        >
+          <input
+            type="email"
+            name="EMAIL"
+            placeholder="Enter your email"
+            class="w-full px-4 py-2 border rounded-lg mb-4"
+            required
+          />
+          <button
+            type="submit"
+            class="btn-hover w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition"
+          >
+            <i class="fas fa-paper-plane mr-2"></i>Subscribe
+          </button>
+        </form>
+        <iframe name="hidden-iframe" style="display: none"></iframe>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white fade-in">
+      <div class="container mx-auto px-4 text-center">
+        <h3 class="text-3xl font-bold mb-8">Contact Us</h3>
+        <p class="text-gray-600 mb-8">
+          Have questions? Reach out to us for more information.
+        </p>
+        <a
+          href="mailto:info@compliguard.tech"
+          class="btn-hover bg-blue-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition inline-flex items-center mr-4"
+          role="button"
+        >
+          <i class="fas fa-envelope mr-2"></i>Email Us
+        </a>
+        <a
+          href="https://www.linkedin.com/in/chrisdeguara/"
+          target="_blank"
+          aria-label="LinkedIn"
+          class="btn-hover bg-white text-blue-700 px-8 py-3 rounded-full font-semibold border border-gray-300 transition inline-flex items-center linkedin-contact"
+        >
+          <i class="fab fa-linkedin mr-2"></i>LinkedIn
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+      <div class="container mx-auto px-4 text-center">
+        <p>&copy; 2025 CompliGuard. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
