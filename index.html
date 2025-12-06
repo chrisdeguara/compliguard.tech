@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CompliGuard - Compliance Reports for Office 365</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://js.stripe.com/v3/"></script>
     <link rel="stylesheet" href="style.css" />
@@ -12,7 +13,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
   </head>
-  <body class="bg-gray-100 font-sans pt-28">
+  <body class="bg-gray-100 font-sans pt-20">
     <!-- Header -->
     <header
       id="header"
@@ -21,7 +22,7 @@
       <div
         class="container mx-auto px-4 py-6 flex justify-between items-center"
       >
-        <h1 class="text-2xl font-bold text-gray-800">CompliGuard</h1>
+        <img src="logo.webp" alt="CompliGuard Logo" class="h-10 w-auto" />
         <button
           id="menu-toggle"
           class="md:hidden text-gray-600 focus:outline-none"
@@ -47,7 +48,7 @@
 
     <!-- Hero Section -->
     <section
-      class="bg-gradient-to-r from-blue-500 to-purple-600 text-white py-20"
+      class="bg-gradient-to-r from-[#60a6a4] to-[#07375d] text-white py-20"
     >
       <div class="container mx-auto px-4 text-center">
         <h2 class="text-4xl font-bold mb-4">
@@ -59,7 +60,7 @@
         </p>
         <a
           href="#pricing"
-          class="btn-hover bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition"
+          class="btn-hover bg-[#60a6a4] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#07375d] transition"
           role="button"
           ><i class="fas fa-arrow-right mr-2"></i>Get Started</a
         >
@@ -69,7 +70,9 @@
     <!-- Features Section -->
     <section id="features" class="py-20 bg-white fade-in">
       <div class="container mx-auto px-4">
-        <h3 class="text-3xl font-bold text-center mb-12">Key Features</h3>
+        <h3 class="text-3xl font-bold text-center mb-12 text-[#07375d]">
+          Key Features
+        </h3>
         <div class="grid md:grid-cols-3 gap-8">
           <div class="feature-card text-center">
             <div
@@ -150,7 +153,9 @@
     <!-- Pricing Section -->
     <section id="pricing" class="py-20 bg-gray-100 fade-in">
       <div class="container mx-auto px-4">
-        <h3 class="text-3xl font-bold text-center mb-12">Pricing</h3>
+        <h3 class="text-3xl font-bold text-center mb-12 text-[#07375d]">
+          Pricing
+        </h3>
         <div
           class="max-w-md mx-auto bg-white rounded-lg shadow-lg overflow-hidden"
         >
@@ -166,7 +171,7 @@
             </div>
             <button
               id="checkout-button"
-              class="btn-hover w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition"
+              class="btn-hover w-full bg-[#60a6a4] text-white py-3 rounded-lg font-semibold hover:bg-[#07375d] transition"
             >
               <i class="fas fa-credit-card mr-2"></i>Buy Now
             </button>
@@ -178,7 +183,7 @@
     <!-- Mailing List Section -->
     <section id="join-us" class="py-20 bg-gray-100 fade-in">
       <div class="container mx-auto px-4 text-center">
-        <h3 class="text-3xl font-bold mb-8">Join Us</h3>
+        <h3 class="text-3xl font-bold mb-8 text-[#07375d]">Join Us</h3>
         <p class="text-gray-600 mb-8">
           Not ready to buy? Join our mailing list for exclusive updates and
           early access invites.
@@ -199,7 +204,7 @@
           />
           <button
             type="submit"
-            class="btn-hover w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition"
+            class="btn-hover w-full bg-[#60a6a4] text-white py-3 rounded-lg font-semibold hover:bg-[#07375d] transition"
           >
             <i class="fas fa-paper-plane mr-2"></i>Subscribe
           </button>
@@ -211,13 +216,13 @@
     <!-- Contact Section -->
     <section id="contact" class="py-20 bg-white fade-in">
       <div class="container mx-auto px-4 text-center">
-        <h3 class="text-3xl font-bold mb-8">Contact Us</h3>
+        <h3 class="text-3xl font-bold mb-8 text-[#07375d]">Contact Us</h3>
         <p class="text-gray-600 mb-8">
           Have questions? Reach out to us for more information.
         </p>
         <a
           href="mailto:info@compliguard.tech"
-          class="btn-hover bg-blue-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition inline-flex items-center mr-4"
+          class="btn-hover bg-[#60a6a4] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#07375d] transition inline-flex items-center mr-4"
           role="button"
         >
           <i class="fas fa-envelope mr-2"></i>Email Us
@@ -226,7 +231,7 @@
           href="https://www.linkedin.com/in/chrisdeguara/"
           target="_blank"
           aria-label="LinkedIn"
-          class="btn-hover bg-white text-blue-700 px-8 py-3 rounded-full font-semibold border border-gray-300 transition inline-flex items-center linkedin-contact"
+          class="btn-hover bg-[#07375d] text-white px-8 py-3 rounded-full font-semibold transition inline-flex items-center linkedin-contact"
         >
           <i class="fab fa-linkedin mr-2"></i>LinkedIn
         </a>
