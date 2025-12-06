@@ -1,20 +1,26 @@
-// Stripe Checkout
-const stripe = Stripe("pk_test_..."); // Replace with your Stripe publishable key
+// Stripe Checkout - Using popup for new window
 const checkoutButton = document.getElementById("checkout-button");
+const heroCheckoutButton = document.getElementById("hero-checkout-button");
 
 checkoutButton.addEventListener("click", () => {
-  stripe.redirectToCheckout({
-    lineItems: [{ price: "price_...", quantity: 1 }], // Replace with your price ID
-    mode: "payment",
-    successUrl: window.location.origin + "/success",
-    cancelUrl: window.location.origin + "/cancel",
-  });
+  window.open(
+    "https://buy.stripe.com/test_28EcN5esD5K84ZC89Zf3a00",
+    "stripeCheckout",
+    "width=800,height=600"
+  );
+});
+
+heroCheckoutButton.addEventListener("click", () => {
+  window.open(
+    "https://buy.stripe.com/test_28EcN5esD5K84ZC89Zf3a00",
+    "stripeCheckout",
+    "width=800,height=600"
+  );
 });
 
 // Header shrink on scroll and dynamic body padding
 function updateHeaderAndBodyPadding() {
   const header = document.getElementById("header");
-  const h1 = header.querySelector("h1");
   const container = header.querySelector(".container");
   const scrollY = window.scrollY;
   const maxShrink = 100; // pixels to fully shrink
@@ -24,10 +30,6 @@ function updateHeaderAndBodyPadding() {
   const padding = 1.5 - shrinkFactor * 0.75;
   container.style.paddingTop = padding + "rem";
   container.style.paddingBottom = padding + "rem";
-
-  // Font size from 1.5rem to 1.25rem
-  const fontSize = 1.5 - shrinkFactor * 0.25;
-  h1.style.fontSize = fontSize + "rem";
 
   // Dynamically set body top padding to header height
   document.body.style.paddingTop = header.offsetHeight + "px";
